@@ -1,0 +1,20 @@
+Source: libmoflow
+Priority: extra
+Maintainer: unknown <alan@eth0.org.uk>
+Build-Depends: debhelper (>= 5), autotools-dev, libjson-glib-dev, libcurl4-openssl-dev
+Standards-Version: 3.7.2
+Section: libs
+
+Package: libmoflow-dev
+Section: libdevel
+Architecture: any
+Depends: libmoflow1 (= ${Source-Version}), libcurl4-openssl-dev, libjson-glib-dev
+Description: live UK motorway data library development
+ libmoflow is a library for retrieving live information on the UK motorway network
+
+Package: libmoflow1
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libjson-glib-1.0-0, libcurl4-openssl-dev
+Description: live UK motorway data library
+ libmoflow is a library for retrieving live information on the UK motorway network
